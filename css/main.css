@@ -1,0 +1,315 @@
+/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0.
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+/* Global Styles */
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+/*
+.@media (min-width: 1200px) {
+    .container{
+        max-width: 1;
+    }
+}    
+*/
+
+html, body {
+    
+height: 100%;
+}
+.headerclass{
+    width: 100%;
+}
+#submitBox{
+ color:greenyellow;
+ }
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+
+.navbar-default {
+    background-color: #808080;
+}
+.welcome{
+    font-style:oblique;
+}
+.dropdown {
+    cursor:pointer;
+}
+.section,
+.section-colored {
+    padding: 0 0;
+}
+
+.section-colored {
+    background-color: #ffffff;
+    /* change this to change the background color of a colored section */
+}
+
+.ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.li{
+    float: left;
+}
+.one{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 150px;
+    
+}
+.two{
+    padding-left: 350px;
+}
+.three{
+    padding-right: 20px;
+}
+.four{
+    padding-top: 80px;
+}
+.five{
+    padding-top: 70px;
+}
+.six{
+    padding-left: 60px;
+}
+.seven{
+    padding-top: 90px;
+    color: ghostwhite;
+}
+.styled-select{
+    height: 40%;
+    width: 30%;
+}
+
+#slideimage{
+    width: 90%;
+    height: 500px;
+}
+#bannerimage{
+    width: 100%;
+    height: 300px;
+}
+
+.copyright{
+    padding-left: 90px;
+}
+.center{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 35px;
+    margin: auto;
+    width: 38%;
+    border: 2px solid lightgray;
+}
+.fixme {  text-align: center; width: 50%; }
+.sidemenu{
+    padding-top: 10px;
+    padding-left: 200px;
+}
+
+#sidecontent{
+    border: 2px solid lightgray;
+    
+}
+.textcontent{
+    padding-left: 15px;
+}
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 200px;
+}
+
+
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 700) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:400px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .two {
+        padding-left: 100px;
+        /* increases the carousel height so it looks good on phones */
+    }
+    .sidemenu{
+        padding-left: 100px;
+    }
+    .element{
+        width: 30%;
+    }
+    .footer {
+    padding-left: 100px;
+    height: 200px;
+    background-color: #dddddd;
+    
+}
+}
+
+
+.element1{
+    position: fixed;
+    top:7%;
+   right:25.5%;
+}
+
+
+.panel-custom{
+    background-color: #eeeeee;
+    width: 100%;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.panel-custom1{
+    
+    background-image: url("background.jpg");
+    width: 100%;
+    position: relative;
+    padding-bottom: 0px;
+}
+.panel-custom a{
+    color: black;
+    
+}
+
+.panel-test{
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid lightgray;
+}
+carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 90%;
+      margin: auto;
+      height: 50%;
+  }
+
+@media screen and (min-width:1400px) and (max-width: 1600px){
+    div.scroll {
+    width: 630px;
+    height: 460px;
+    overflow: scroll;
+}
+ .footer {
+    padding-left: 620px;
+  height: 70px;
+    background-color: #dddddd;
+    
+}
+    .content {
+  padding-bottom: 245px;
+  
+}
+     .content1 {
+  padding-bottom: 150px;
+  
+}
+    .element{
+    position: fixed;
+    top:19%;
+   right:0%;
+}
+}
+
+@media screen and (min-width:1200px) and (max-width: 1390px){
+    div.scroll {
+    width: 600px;
+    height: 320px;
+    overflow: scroll;
+}
+    .footer {
+    padding-left: 500px;
+  height: 70px;
+    background-color: #dddddd;
+    
+}
+    .content {
+  padding-bottom: 250px;
+  
+}
+     .content1 {
+  padding-bottom: 150px;
+  
+}
+    .element{
+    position: fixed;
+    top:23%;
+   right:0%;
+}
+}
+
+@media screen and (min-width:1000px) and (max-width: 1190px){
+    
+
+    div.scroll {
+    width: 450px;
+    height: 380px;
+    overflow: scroll;
+}
+    .footer {
+    padding-left: 500px;
+  height: 70px;
+    background-color: #dddddd;
+    
+}
+    .content {
+  padding-bottom: 160px;
+  
+}
+     .content1 {
+  padding-bottom: 150px;
+  
+}
+    .element{
+    position: fixed;
+    top:25%;
+   right:0%;
+}
+}

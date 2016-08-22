@@ -1,0 +1,102 @@
+<div class="content1">
+    <div ng-controller="AboutUsCtrl" >
+    <img id ="bannerimage" src="img/aboutus.jpg">
+        
+        <div id="content">
+  <div class="row">
+<div class="col-md-4">
+    <div class="span2 sidebar" >
+    <div class="sidemenu">
+        <ul class="nav nav-tabs nav-stacked">
+            
+        <li ng-repeat = "menu in sideMenuContent"><a ng-click="setpage(menu)" >{{menu.name}}</a></li>
+            
+        </ul>
+    </div>
+    </div>
+</div>
+      
+<div class="col-md-8">
+    <div ng-switch on = "currentContent.name">
+        <div ng-switch-when = "About Us"><h2>{{currentContent.name}}</h2>
+            <p>Swasri Infra is a Construction company formed from the merger of Swasri Associates and Swasri Enterprises. The company has successfully operated in the Hyderabad area for the past 10 years working on both small and large scale construction, repair, and alteration projects focusing on residential contracting.</p>
+            <ul style="list-style-type:disc">
+                <li>Over 15 completed Residential and 4 Commercial projects.</li>
+                <li>Over 10 years of rich legacy.</li>
+                <li>6 million sft of total built-up area.</li>
+                <li>Over 1 million sft is under construction.</li>
+                <li>Our formulae PQRST- Punctuality, Quality, Reliability, Speed and Transparency and super execution capability.</li>
+                <li>Proven history of significant appreciation for every property.</li>
+                <li>We just donot build but we give life to our customers dream home, hence before commencing our construction we do a thorough study on our customers needs in every aspect.</li>
+            </ul>
+        </div>
+        
+        <div ng-switch-when = "Our Mission"><h2>{{currentContent.name}}</h2>
+            <p>"To be able to meet the needs of our clients whilst exploring new opportunities and conducting business in a socially, economically and environmentally responsible manner, thereby creating value and sustainability for all our stakeholders."</p>
+            
+            <p>Swasri Infra strives to offer</p>
+             <ul style="list-style-type:disc">
+                <li>The Finest Quality Design.</li>
+                <li>Able to meet the needs of our clients.</li>
+                 <li>Swasri maintains the highest standards of service in the commercial construction industry.</li>
+            </ul>
+             
+        </div>
+        <div ng-switch-when = "Vision"><h2>{{currentContent.name}}</h2>{{currentContent.content}}</div>
+        <div ng-switch-when = "Values"><h2>{{currentContent.name}}</h2>
+        <p>The confidence of our investors enables us to achieve excellence in construction, architecture and design and draw new benchmarks in the Indian real estate company.</p>
+            <p>Customers trust on us is our most valuable asset. Whatever commitment we have made to you as our valued customer, we are determined to perform and prove the same. Customers are the central focus for us. Without them and their continued support, we could not have achieved whatever we have been able to achieve so far.</p>
+            <p>We are very much sure that our customer support and trust for us will continue to strengthen us in future too. On our part, we once again promise that we will never let their trust down.</p>
+        
+        </div>
+        <div ng-switch-when = "Quality Policy"><h2>{{currentContent.name}}</h2>{{currentContent.content}}</div>
+        <div ng-switch-when = "Management"><h2>{{currentContent.name}}</h2>
+        <p>Our country is known for its culture and tradition. Today, a more modern India is on the move to become a global leader in various sectors. However what remains constant is the dream to possess a home. This is a dream because it involves planning, budget and finally owning one, and this process is a long and tedious journey.</p> <p>A developed nation is always judged by the infrastructure it has. And it is Swasri dream to provide landmark creations that add value to Indias global stature. It is our dream to provide world class townships with the best architecture that can leave behind a lasting impression.</p>
+        <p>It is our dream to provide hi-quality residences and commercial spaces. Therefore what you see in all our creations are a testimony to our commitment and passion in creating aesthetic landmarks that speak of exquisite quality throughout.</p>
+            
+        
+        
+        </div>
+        <div ng-switch-when = "Services"><h2>{{currentContent.name}}</h2>
+        <p>Swasri infra provides a comprehensive range of services that include design, development, construction, Architectural Design, Engineering and Building Services Design, Interior Design and Construction Management with a strong emphasis on transport-related projects.</p>
+            
+            <p>Together with the experienced & qualified workforce, superior skills and deployment of reliable & efficient equipment.
+            Swasri infra has developed a reputation of completing projects on time within budget without compromising on safety & quality.<p>
+
+            <p>Swasri infra has been executing various civil projects in all over city. The company has made an outstanding contribution to civil engineering projects around the city in widely divergent areas such as High rise buildings, commercial complexes and other environment related projects.<p>
+            
+            <p>Expertise in construction works for higher magnitude i.e. Factories, corporate, IT Park, Commercial, Residential complexes, Malls, Hotels, Hospital and Educational Institutions etc.</p>
+            
+            <strong>Consultation</strong>
+
+            <p>We recognize and place great importance on the value of good communication and organization. Our clients can have confidence that they receive the benefit of having the best personally sourced, commissioned and coordinated for them. 
+            Consulting for investment and finance is also undertaken.</p>
+            
+            <strong>Space planning</strong>
+
+            <p>we are able to offer each client out standing value, personalized service and results. Swasri infra priority is to act on behalf of our clients and our aim is to ensure that our clients received the benefit of our extensive knowledge, contacts and expertise.</p>
+            
+            <strong>Specifications</strong>
+
+            <p>whilst retaining the highest level of professional specialization in accessing each clients individual needs, identifying and advising on the best solutions coordinating and closely monitoring each and every cost.</p>
+            
+        
+        </div>
+        <div ng-switch-when = "Careers"><h2>{{currentContent.name}}</h2>
+        <p>Swasri infra group values its people as one of its most important resources. The company prides itself on being an employer of choice and supports all staff to reach their full potential.</p>
+            <p>It attracts the best talent from across the globe and provides considerable scope for career development and skill enhancement.We are passionate about our work and believe in leaving a mark in every sector we step in.</p>
+            <p>But at the end of the day it is really all about our people. In swasri infra it is "us" not "me". Our success in not only attributed to our visionaries and core management but to every individual who believes in the company and enriches it with their experience and expertise.</p>
+        
+        </div>
+      </div>
+    </div>
+
+
+</div>
+</div>
+                
+    </div>
+    
+    </div>
+<div class="five"></div>
+

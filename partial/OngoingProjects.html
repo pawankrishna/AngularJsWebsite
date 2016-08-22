@@ -1,0 +1,632 @@
+<div class="content">
+<div class="container">
+<div ng-controller="OngoingProjectsCtrl">
+    
+
+    <div class="row">
+
+        <div class="col-lg-6">
+            
+            <h3 class="page-header">Checkout Our Amazing Ongoing Projects</h3>
+
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="element1">
+            <h3 class="page-header">Project In Detail <small>Overview</small></h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <strong><select  id = "soflow" name="showfilter" ng-model="imageFilter1" ng-options="i.location for i in images | unique : 'location'">
+                                <option value="">Select Location</option>
+                            </select>
+                        
+                            <select id = "soflow" name="showfilter" ng-model="imageFilter2" ng-options="i.HouseType for i in images | unique : 'HouseType'">
+    
+                                <option value="">Select HouseType</option>
+                            </select>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>
+                        <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                            
+                                <div ng-repeat = "i in images | filter : {location: imageFilter1.location,HouseType:imageFilter2.HouseType}: true">
+                                    <div class="col-md-8">
+                                <a ng-click="setpage(i)" >{{i.id}}.{{i.location}}<br/><img ng-src ="{{i.image}}"/></a>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="four">
+                                    <p>{{i.title}}</p>
+                                    <h3 class="blinking" ><a style="color:red;" href="#/ContactUs">{{i.status}}</a></h3>
+                                </div>
+                                </div>
+                                    </div>
+                            
+                                 
+                            </div>
+                        </div>
+                        </div>
+                        
+                        </strong>
+                   
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="element">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    
+            <div class="panel panel-default">
+                <div class="scroll">
+                <div class="panel-heading">
+                    <h4>{{currentImage.title}}</h4>
+                    <strong><div ng-switch on = "currentImage.id">
+            <div ng-switch-when = "1"><img ng-src ="{{currentImage.bigImage}}"/>
+    <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Dhatu Nagar near Midhani Township, it is a very good Defence location. It is well connected to World Class Schools, Management Colleges, 10 kms from International Airport, 10 kms from Adibatla, 6 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+        
+        
+        </div>
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+      </div>
+    </div>
+                        </div>
+        <div ng-switch-when = "2">
+            <div class="six">
+            <img ng-src ="{{currentImage.bigImage}}"/>
+                </div>
+            <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Hastinapur, it is a very good location. It is well connected to World Class Schools, Management Colleges, 8 kms from International Airport, 12 kms from Adibatla, 10 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+        
+        </div>
+        
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>                
+        </div>
+        <div ng-switch-when = "3">
+             <div class="six">
+            <img ng-src ="{{currentImage.bigImage}}"/>
+                </div>
+            <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Uppal, it is a very good location. It is well connected to World Class Hyderabad Metro Rail, Schools, Management Colleges, 15 kms from International Airport, 12 kms from Adibatla, 8 kms from Outer Ring Road. It is surrounded by Metro Rail Hub, supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+
+        
+        </div>
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+            </div>
+        </div>
+        <div ng-switch-when = "Specifications"><h2>{{currenttab.tab}}</h2></div>
+      </div>
+    </div>                
+        </div>
+                        
+        <div ng-switch-when = "4">
+            <img ng-src ="{{currentImage.bigImage}}"/>
+            <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Badangpet, it is a very good location. It is well connected to World Class Schools, Management Colleges, 8 kms from International Airport, 12 kms from Adibatla, 10 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+        
+        </div>
+        
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>                
+        </div>
+
+                        <div ng-switch-when = "5">
+            <div class="six">
+            <img ng-src ="{{currentImage.bigImage}}"/>
+                </div>
+            <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Hastinapur, it is a very good location. It is well connected to World Class Schools, Management Colleges, 8 kms from International Airport, 12 kms from Adibatla, 10 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+        
+        </div>
+        
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>                
+        </div>
+<div ng-switch-when = "6">
+            <div class="six">
+            <img ng-src ="{{currentImage.bigImage}}"/>
+                </div>
+            <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Hastinapur, it is a very good location. It is well connected to World Class Schools, Management Colleges, 8 kms from International Airport, 12 kms from Adibatla, 10 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+        
+        </div>
+        
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>                
+        </div>
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+        <div ng-switch-when = "image1"><h2>{{currentContent.name}}</h2>{{currentContent.content}}
+                        
+                        <div class="panel panel-custom">
+        <ul class="nav nav-tabs">
+            
+        <li ng-repeat ="menu in tabDetails"><a href="" ng-click="setpage1(menu)" >{{menu.tab}}</a></li>
+            
+        </ul>
+                </div>
+                        <div class="">
+    <div ng-switch on = "currenttab.tab">
+        <div ng-switch-when = "Overview">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>This Project located at Badangpet, it is a very good location. It is well connected to World Class Schools, Management Colleges, 8 kms from International Airport, 8 kms from Adibatla, 6 kms from Outer Ring Road. It is surrounded by supermarkets and hospitals.</small>
+                    </div>
+                </div>
+            </div>
+        <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small>BUILT UP AREA : {{currentImage.builtUpArea}}</small><br/>
+                        </div>
+                        <div class="col-md-6">
+                            <small>FLOOR : {{currentImage.floor}}</small><br/>  
+                        </div>
+                    
+                     <div class="col-md-6">
+                            <small>BATHROOM : {{currentImage.bathroom}}</small><br/>  
+                        </div>
+                        <div class="col-md-6">
+                            <small>FACING : {{currentImage.facing}}</small>
+                            
+                        </div>
+                    <div class="col-md-6">
+                            <small>BEDROOM : {{currentImage.bedroom}}</small><br/>
+                        </div>
+                        <div class ="col-md-6">
+                            <small>PARKING : {{currentImage.parking}}</small>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+</div> 
+        <div ng-switch-when = "Amenities">
+            <div class="panel panel-test">
+                <div class="row">
+                    <div class="col-md-4">
+                    <small><img src="img/parking.jpg" style = "height:30px; width:30px"> Parking : 1</small>
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/tap.jpg" style = "height:30px; width:30px"> Municipality and Bore Water</small> 
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-4">
+                        <small><img src="img/power.jpg" style = "height:30px; width:30px"> Power Backup</small> 
+                    </div>
+                    <div class="col-md-6">
+                        <small><img src="img/lift.jpg" style = "height:30px; width:30px"> Lift</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-switch-when = "Specifications"><h2>{{currenttab.tab}}</h2></div>
+      </div>
+    </div>
+                        </div>
+        <div ng-switch-when = "image1"><h2>{{currentContent.name}}</h2>{{currentContent.content}}</div>
+      </div></strong>
+                    
+                </div>
+                </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- /.container -->
+
